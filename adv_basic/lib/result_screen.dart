@@ -54,7 +54,14 @@ class ResultScreen extends StatelessWidget {
               QuestionSummary(summary: summary, onRestartQuiz: restartQuiz),
               SizedBox(height: 20),
 
-              OutlinedButton(onPressed: restartQuiz, child: Text("test")),
+              OutlinedButton.icon(
+                onPressed: restartQuiz,
+                label: Text(
+                  "Restart",
+                  style: TextStyle(fontSize: 14, color: Colors.white),
+                ),
+                icon: Icon(Icons.restart_alt, color: Colors.white),
+              ),
             ],
           ),
         ),

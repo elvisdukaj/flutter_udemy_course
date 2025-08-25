@@ -26,9 +26,22 @@ class SummaryItem extends StatelessWidget {
 
     return Row(
       children: [
-        Text((questionNumber + 1).toString()),
-        SizedBox(width: 20),
-
+        Center(
+          child: Container(
+            width: 30,
+            height: 30,
+            alignment: Alignment.center,
+            decoration: BoxDecoration(
+              color: Colors.amber,
+              shape: BoxShape.circle,
+            ),
+            child: Text(
+              (questionNumber + 1).toString(),
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            ),
+          ),
+        ),
+        SizedBox(width: 10),
         Expanded(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
